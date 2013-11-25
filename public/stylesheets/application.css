@@ -1,0 +1,39 @@
+div.box, div.cell {
+	display: inline-block;
+	font-size: 0px;
+ 
+}
+
+div.row {
+	margin-bottom: 3px
+}
+
+div.box{
+	padding: 1px 1px 1px 1px;
+	border: 2px solid blue;
+	border-radius: 8;
+}
+div.soduku{
+	text-align: center;
+}
+
+div.grid{
+	margin: 0 auto;
+	width: 440px;
+	
+}
+
+
+.cell input {
+    float:left;
+    display:inline;
+    width:45px;
+    height:45px;
+    text-align:center;
+    font-size:29px;
+    border:2px solid black;
+    border-radius: 8;
+    margin:0;
+
+}
+
