@@ -13,7 +13,7 @@ div.box{
 	border: 2px solid blue;
 	border-radius: 8;
 }
-div.soduku{
+div.soduku div.container{
 	text-align: center;
 }
 
@@ -35,5 +35,17 @@ div.grid{
     border-radius: 8;
     margin:0;
 
+}
+
+div.title
+{
+		margin: 0 auto;
+	margin-bottom: 65px;
+	text-align: center;
+	border:2px solid blue;
+	padding:10px 40px; 
+	background:#dddddd;
+	width:440px;
+	border-radius:8px;
 }
 
