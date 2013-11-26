@@ -1,13 +1,16 @@
 <html>
 	<head>
-		<title>Soduku Game</title>
+		<title>Sudoku Game</title>
 		<link href='/stylesheets/application.css' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
+		<div class="flash">
+  		<%= flash[:notice] %>
+		</div>
 		<div class="container">
 			<div class="title" >
-				<h1>Is life to short to play Soduku ?</h1>
+				<h1>Is life too short to play Sudoku ?</h1>
 			</div>
 		</div>
   <%= yield %>

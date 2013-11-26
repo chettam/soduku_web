@@ -90,6 +90,11 @@ class Cell
    end
   end
 
+  def unsolve!
+    self.value = 0
+    initial_candidates
+  end
+
   def update(grid)
     self.update_candidates(grid)
     self.solve!

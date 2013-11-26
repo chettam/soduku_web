@@ -46,9 +46,15 @@ describe Cell do
 		end
 
 		it "how to fill out a cell" do
-			cell.candidates = 2
+			cell.value = 2
 			cell.solve!
-			expect(cell.filled_out?)
+			expect(cell.filled_out?).to be_true
+		end
+
+		it "how to unsolve a cell" do
+			cell.value = 2
+			cell.unsolve!
+			expect(cell.filled_out?).to be_false
 		end
 
 		it "how to find a cell candidate base on an horizontal row" do

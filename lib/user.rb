@@ -1,6 +1,7 @@
 class User
 
 	attr_reader :grid
+	attr_accessor :unsolved_grid
 
 	def initialize
 		@grid = make_random_grid
@@ -13,5 +14,13 @@ class User
 	sudoku.solve
 	sudoku
 	end
+
+	def create_unsolved_grid
+		@unsolved_grid = Grid.new
+		@unsolved_grid.create(grid.to_s)
+		@unsolved_grid.cells.each { |cell| cell.unsolve! if rand(50).odd?}
+	end
+
+
 
 end

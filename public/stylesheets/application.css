@@ -1,51 +1,74 @@
 div.box, div.cell {
 	display: inline-block;
-	font-size: 0px;
+	/*font-size: 0px;*/
  
 }
 
 div.row {
-	margin-bottom: 3px
+	/*margin-bottom: 3px*/
 }
 
 div.box{
-	padding: 1px 1px 1px 1px;
-	border: 2px solid blue;
-	border-radius: 8;
+border :1px solid black;
 }
 div.soduku div.container{
 	text-align: center;
 }
 
 div.grid{
+	font-size: 0px;
 	margin: 0 auto;
-	width: 440px;
+	width: 465px;
+	border :2px solid black;
+}
+
 	
+}
+
+.value-provided{
+	background-color: #dddddd;
+}
+
+.incorrect {
+	background-color: red;
 }
 
 
 .cell input {
+		margin: 3px 3px 3px 3px;
     float:left;
     display:inline;
     width:45px;
     height:45px;
     text-align:center;
-    font-size:29px;
-    border:2px solid black;
-    border-radius: 8;
+    font-size:20px;
+    border:0px solid black;
+    border-radius: 50%;*/
     margin:0;
-
+ 
 }
 
 div.title
 {
-		margin: 0 auto;
-	margin-bottom: 65px;
+	margin: 0 auto;
+	margin-bottom: 5px;
 	text-align: center;
-	border:2px solid blue;
-	padding:10px 40px; 
-	background:#dddddd;
-	width:440px;
+	padding:0px 0px; 
+	width:465px;
 	border-radius:8px;
+}
+
+#flash {
+	text-align: center;
+  margin: 20px;
+}
+
+.button{
+	text-align: center;
+ border-radius: 50%;
+ 		width:80px;
+    height:80px;
+
+    background-color: red;
 }
 
