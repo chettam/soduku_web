@@ -2,18 +2,17 @@
 	<head>
 		<title>Sudoku Game</title>
 		<link href='/stylesheets/application.css' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
 	</head>
-
 	<body>
-		<div class="flash">
-  		<%= flash[:notice] %>
-		</div>
 		<div class="container">
 			<div class="title" >
 				<h1>Is life too short to play Sudoku ?</h1>
 			</div>
+			<%= yield %>
+			<div class="flash">
+  			<%= flash[:notice] %>
+			</div>
 		</div>
-  <%= yield %>
-
 	</body>
 </html>

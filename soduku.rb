@@ -3,11 +3,13 @@ require_relative './lib/grid'
 require_relative './lib/cell'
 require_relative './lib/user'
 require_relative './helpers/application'
+require 'sinatra/partial' 
+
 require 'rack-flash'
 
 def create_user
 	user = User.new
-	user.create_unsolved_grid
+	user.create_unsolved_grid(easy)
 	user
 end
 
@@ -36,13 +38,14 @@ end
 def prepare_to_check_solution
   @check_solution = session[:check_solution]
   if @check_solution
-    flash[:notice] = "Incorrect values are highlighted in yellow"
+    flash[:notice] = "Incorrect values are highlighted in Yellow"
   end
   session[:check_solution] = nil
 end
 
 enable :sessions
 set :session_secret, "cedvjrnvoirgbruvgovieirvjerobge"
+set :partial_template_engine, :erb
 use Rack::Flash
 
 get '/' do # default route for our website
@@ -54,6 +57,15 @@ get '/' do # default route for our website
 	erb :index
 end
 
+get '/new_game' do
+	level = params[:level]
+	user = User.new
+	user.create_unsolved_grid(level)
+	session[:solution] = user.grid.to_s
+	session[:puzzle] = user.unsolved_grid.to_s
+	session[:current_solution] = session[:puzzle]
+	redirect to("/")
+end
 
 
 get '/solution' do

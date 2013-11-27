@@ -1,3 +1,7 @@
+h1{
+	font-family: 'Days One', sans-serif;
+}
+
 div.box, div.cell {
 	display: inline-block;
 	/*font-size: 0px;*/
@@ -9,7 +13,7 @@ div.row {
 }
 
 div.box{
-border :1px solid black;
+border :2px solid #e6fb8b;
 }
 div.soduku div.container{
 	text-align: center;
@@ -18,19 +22,16 @@ div.soduku div.container{
 div.grid{
 	font-size: 0px;
 	margin: 0 auto;
-	width: 465px;
+	width: 473px;
 	border :2px solid black;
 }
 
-	
-}
-
-.value-provided{
-	background-color: #dddddd;
+.value-provided {
+	background-color: #d6d6d6;
 }
 
 .incorrect {
-	background-color: red;
+	background-color: #e6fb8b;
 }
 
 
@@ -41,12 +42,12 @@ div.grid{
     width:45px;
     height:45px;
     text-align:center;
-    font-size:20px;
-    border:0px solid black;
+    font-size:17px;
+    font-family: 'Days One', sans-serif;
+    border:2px solid #D3D3D3;
     border-radius: 50%;*/
     margin:0;
- 
-}
+ }
 
 div.title
 {
@@ -54,21 +55,37 @@ div.title
 	margin-bottom: 5px;
 	text-align: center;
 	padding:0px 0px; 
-	width:465px;
+	width:900px;
 	border-radius:8px;
 }
 
-#flash {
+.flash {
 	text-align: center;
-  margin: 20px;
+	font-size: 25px;
+  margin: 0 auto;
+  background-color: #e6fb8b;
+  margin-bottom: 15px;
 }
 
 .button{
+	margin: 0 auto;
+	font-family: 'Days One', sans-serif;
 	text-align: center;
- border-radius: 50%;
- 		width:80px;
-    height:80px;
-
-    background-color: red;
+ 	border-radius: 50%;
+ 	width:80px;
+  height:80px;
+  background-color: #e6fb8b;
 }
+.left{
+	float: left;
+margin-left: 300px;
+margin-top: 105px;
+}
+.right{
+float: right;
+text-align: left;
+margin-top: -275px;
+margin-right: 300px;
+}
+
 

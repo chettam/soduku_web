@@ -15,12 +15,10 @@ class User
 	sudoku
 	end
 
-	def create_unsolved_grid
+	def create_unsolved_grid(level)
+		random_value = level == "easy" ? 50 : 2
 		@unsolved_grid = Grid.new
 		@unsolved_grid.create(grid.to_s)
-		@unsolved_grid.cells.each { |cell| cell.unsolve! if rand(50).odd?}
+		@unsolved_grid.cells.each { |cell| cell.unsolve! if rand(random_value).odd?}
 	end
-
-
-
 end
